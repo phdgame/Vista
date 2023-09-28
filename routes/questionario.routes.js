@@ -25,5 +25,5 @@ module.exports = function(app) {
   app.post("/delete/partedoquestionario", [authJwt.verifyToken, authJwt.isCompradorOrMontadordeFerramentas], controller.excluirPartedoQuestionario);
   app.get("/list/questionariosportipos/:ids", controller.listQuestionariosporTipos);
   app.get("/list/respostas", controller.listRespostas);
-  app.post("/add/respostaquestionario", [authJwt.verifyToken, authJwt.isCompradorOrMontadordeFerramentas], controller.addRespostaQuestionario);
+  app.post("/add/respostaquestionario", controller.addRespostaQuestionario);
 };
