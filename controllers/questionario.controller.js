@@ -169,7 +169,7 @@ exports.adicionarQuestionario = async (req, res) => {
     } catch (err) {
         console.log(err)
         res.status(500)
-        res.send({ status: 'error', message: err.message});
+        res.send({ status: 'error', message: err});
     }
 }
 
