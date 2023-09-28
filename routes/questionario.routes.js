@@ -12,7 +12,7 @@ module.exports = function(app) {
 
   app.get("/list/questionarios", controller.listQuestionarios);
   app.get("/list/tiposdequestionarios", controller.listTiposdeQuestionario);
-  app.post("/add/questionario", [authJwt.verifyToken, authJwt.isCompradorOrMontadordeFerramentas], controller.adicionarQuestionario);
+  app.post("/add/questionario", controller.adicionarQuestionario);
   app.post("/list/questionario", controller.questionarioporId);
   app.post("/list/partesdoquestionario", controller.partesdoquestionarioporId);
   app.get("/list/tiposderespostas", controller.listTiposdeRespostas);
